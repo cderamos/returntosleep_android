@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-
+/*
 
 public class ChoreListActivity extends Activity {
 
@@ -38,3 +38,6 @@ public class ChoreListActivity extends Activity {
         });
     }
 }
+
+
+*/

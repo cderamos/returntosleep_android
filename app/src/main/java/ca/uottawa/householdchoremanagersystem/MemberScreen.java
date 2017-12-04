@@ -69,6 +69,10 @@ public class MemberScreen extends AppCompatActivity{
         final FloatingActionButton unlockBtn = (FloatingActionButton) findViewById(R.id.unlockBtn);
         final FloatingActionButton addMemberBtn = (FloatingActionButton) findViewById(R.id.addMemberBtn);
 
+        lockBtn.setVisibility(View.VISIBLE);
+        unlockBtn.setVisibility(View.GONE);
+        addMemberBtn.setVisibility(View.GONE);
+
         lockBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

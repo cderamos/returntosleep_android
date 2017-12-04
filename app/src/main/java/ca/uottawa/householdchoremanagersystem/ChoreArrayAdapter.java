@@ -12,10 +12,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
-
+/*
 
     public class ChoreArrayAdapter extends ArrayAdapter<Chore>  {
-        /**/
         private final Context context;
         private final ArrayList<Chore> chores;
 //change to correct xml file
@@ -45,3 +44,5 @@ import java.util.ArrayList;
         }
     }
 
+
+    */
