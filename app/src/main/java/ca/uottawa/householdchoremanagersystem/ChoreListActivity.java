@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-/*
+
 
 public class ChoreListActivity extends Activity {
 
@@ -25,7 +25,7 @@ public class ChoreListActivity extends Activity {
 
     //Defining Array values to show in ListView
     ChoreArrayAdapter adapter = new ChoreArrayAdapter(this, manager.getChoreList());
-        listView.setAdapter(adapter);
+    // listView.setAdapter(adapter);
 
     {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -38,6 +38,3 @@ public class ChoreListActivity extends Activity {
         });
     }
 }
-
-
-*/

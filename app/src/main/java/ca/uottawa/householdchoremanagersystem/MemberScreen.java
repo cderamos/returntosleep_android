@@ -25,7 +25,7 @@ import java.util.ArrayList;
  * Created by keirt on 2017-11-24.
  */
 
-public class MemberScreen extends AppCompatActivity{
+public class MemberScreen extends AppCompatActivity {
 
     private EditText password;
 
@@ -55,14 +55,19 @@ public class MemberScreen extends AppCompatActivity{
         //Get info from create_group layout
         Intent intent = getIntent();
         String group_name = intent.getStringExtra("GROUP_NAME");
-        String group_password = intent.getStringExtra( "GROUP_PASSWORD");
+        String group_password = intent.getStringExtra("GROUP_PASSWORD");
         TextView groupName = (TextView) findViewById(R.id.groupName);
         groupName.setText(group_name);
 
         //Password insertion
         FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+
         final DatabaseReference myRef = database.getReference();
         myRef.child("userInput").setValue(group_password);
+        final DatabaseReference passRef = database.getReference("Password");
+        final DatabaseReference memberRef = database.getReference("Members");
+        passRef.child("userInput").setValue(group_password);
         Toast.makeText(MemberScreen.this, "Group Successfully Created!", Toast.LENGTH_SHORT).show();
 
         final FloatingActionButton lockBtn = (FloatingActionButton) findViewById(R.id.lockBtn);
@@ -73,6 +78,7 @@ public class MemberScreen extends AppCompatActivity{
         unlockBtn.setVisibility(View.GONE);
         addMemberBtn.setVisibility(View.GONE);
 
+
         lockBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,7 +87,7 @@ public class MemberScreen extends AppCompatActivity{
                 alertPW.setPositiveButton("Unlock", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        myRef.child("userInput").addValueEventListener(new ValueEventListener() {
+                        passRef.child("userInput").addValueEventListener(new ValueEventListener() {
                             @Override
                             public void onDataChange(DataSnapshot dataSnapshot) {
                                 String passwordInput = password.getText().toString().trim();
@@ -91,9 +97,10 @@ public class MemberScreen extends AppCompatActivity{
                                     unlockBtn.setVisibility(View.VISIBLE);
                                     addMemberBtn.setVisibility(View.VISIBLE);
                                 } else {
-                                    Toast.makeText(MemberScreen.this,"Invalid Password", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(MemberScreen.this, "Invalid Password", Toast.LENGTH_SHORT).show();
                                 }
                             }
+
                             @Override
                             public void onCancelled(DatabaseError databaseError) {
                             }
@@ -106,7 +113,7 @@ public class MemberScreen extends AppCompatActivity{
 
                     }
                 });
-               alertPW.show();
+                alertPW.show();
             }
         });
 
@@ -119,24 +126,26 @@ public class MemberScreen extends AppCompatActivity{
             }
         });
 
-        addMemberBtn.setOnClickListener(new View.OnClickListener(){
+        addMemberBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 memberName = new EditText(MemberScreen.this);
                 alertMem.setView(memberName);
                 alertMem.setPositiveButton("Add", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         //Initialize variables
-                        list = new ArrayList<String>();
+                        /*list = new ArrayList<String>();
                         membersList = (ListView) findViewById(R.id.membersList);
                         adapter = new ArrayAdapter<String>(MemberScreen.this, android.R.layout.simple_list_item_1, list);
-                        membersList.setAdapter(adapter);
+                        membersList.setAdapter(adapter);*/
                         //add member into the list
                         String result = memberName.getText().toString();
-                        list.add(result);
-                        adapter.notifyDataSetChanged();
+                        String id = memberRef.push().getKey();
+                        Member member = new Member(result);
+                        member.setId(id);
+                        memberRef.child(result).setValue(member);
                     }
                 });
                 alertMem.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -149,5 +158,6 @@ public class MemberScreen extends AppCompatActivity{
             }
 
         });
+
     }
 }
