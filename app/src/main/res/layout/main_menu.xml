@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:visibility="visible">
+
+
+    <LinearLayout
+
+        android:id="@+id/memberLayout"
+
+        android:layout_width="0dp"
+
+        android:layout_height="0dp"
+
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.0"
+
+        tools:layout_constraintBottom_creator="1"
+
+        tools:layout_constraintLeft_creator="1"
+
+        tools:layout_constraintRight_creator="1"
+
+        tools:layout_constraintTop_creator="1">
+
+
+        <android.support.design.widget.AppBarLayout
+
+            android:id="@+id/memberBar"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintVertical_bias="0.0"
+
+            tools:layout_constraintBottom_creator="1"
+
+            tools:layout_constraintLeft_creator="1"
+
+            tools:layout_constraintTop_creator="1">
+
+
+            <android.support.design.widget.TabLayout
+
+                android:id="@+id/memberTabs"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                app:tabIndicatorColor="@color/colorAccent">
+
+
+                <android.support.design.widget.TabItem
+
+                    android:id="@+id/membersTab"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:clickable="true"
+
+                    android:focusable="true"
+
+                    android:text="Members" />
+
+
+                <android.support.design.widget.TabItem
+
+                    android:id="@+id/choresTab"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:clickable="true"
+
+                    android:focusable="true"
+
+                    android:text="Chores" />
+
+
+                <android.support.design.widget.TabItem
+
+                    android:id="@+id/logsTab"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:clickable="true"
+
+                    android:focusable="true"
+
+                    android:text="Logs" />
+
+            </android.support.design.widget.TabLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/chore_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/choreName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Chore name" />
+
+                        <TextView
+                            android:id="@+id/deadline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Deadline" />
+
+                        <TextView
+                            android:id="@+id/assignedTo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Assigned to" />
+
+                        <TextView
+                            android:id="@+id/points"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Points" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="51dp"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <FrameLayout
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/isCompleteImage"
+                            android:layout_width="33dp"
+                            android:layout_height="31dp"
+                            android:layout_weight="1"
+                            android:visibility="visible"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@android:drawable/checkbox_off_background"
+                            tools:layout_constraintTop_creator="1"
+                            tools:layout_editor_absoluteX="333dp" />
+                    </FrameLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/chore_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/choreName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Chore name" />
+
+                        <TextView
+                            android:id="@+id/deadline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Deadline" />
+
+                        <TextView
+                            android:id="@+id/assignedTo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Assigned to" />
+
+                        <TextView
+                            android:id="@+id/points"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Points" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="51dp"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <FrameLayout
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/isCompleteImage"
+                            android:layout_width="33dp"
+                            android:layout_height="31dp"
+                            android:layout_weight="1"
+                            android:visibility="visible"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@android:drawable/checkbox_off_background"
+                            tools:layout_constraintTop_creator="1"
+                            tools:layout_editor_absoluteX="333dp" />
+                    </FrameLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/chore_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/choreName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Chore name" />
+
+                        <TextView
+                            android:id="@+id/deadline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Deadline" />
+
+                        <TextView
+                            android:id="@+id/assignedTo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Assigned to" />
+
+                        <TextView
+                            android:id="@+id/points"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Points" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="51dp"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <FrameLayout
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/isCompleteImage"
+                            android:layout_width="33dp"
+                            android:layout_height="31dp"
+                            android:layout_weight="1"
+                            android:visibility="visible"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@android:drawable/checkbox_off_background"
+                            tools:layout_constraintTop_creator="1"
+                            tools:layout_editor_absoluteX="333dp" />
+                    </FrameLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/chore_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/choreName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Chore name" />
+
+                        <TextView
+                            android:id="@+id/deadline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Deadline" />
+
+                        <TextView
+                            android:id="@+id/assignedTo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Assigned to" />
+
+                        <TextView
+                            android:id="@+id/points"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Points" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="51dp"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <FrameLayout
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/isCompleteImage"
+                            android:layout_width="33dp"
+                            android:layout_height="31dp"
+                            android:layout_weight="1"
+                            android:visibility="visible"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@android:drawable/checkbox_off_background"
+                            tools:layout_constraintTop_creator="1"
+                            tools:layout_editor_absoluteX="333dp" />
+                    </FrameLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/chore_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/choreName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Chore name" />
+
+                        <TextView
+                            android:id="@+id/deadline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Deadline" />
+
+                        <TextView
+                            android:id="@+id/assignedTo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Assigned to" />
+
+                        <TextView
+                            android:id="@+id/points"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Points" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="51dp"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <FrameLayout
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/isCompleteImage"
+                            android:layout_width="33dp"
+                            android:layout_height="31dp"
+                            android:layout_weight="1"
+                            android:visibility="visible"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@android:drawable/checkbox_off_background"
+                            tools:layout_constraintTop_creator="1"
+                            tools:layout_editor_absoluteX="333dp" />
+                    </FrameLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/chore_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/choreName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Chore name" />
+
+                        <TextView
+                            android:id="@+id/deadline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Deadline" />
+
+                        <TextView
+                            android:id="@+id/assignedTo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Assigned to" />
+
+                        <TextView
+                            android:id="@+id/points"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Points" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="51dp"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <FrameLayout
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/isCompleteImage"
+                            android:layout_width="33dp"
+                            android:layout_height="31dp"
+                            android:layout_weight="1"
+                            android:visibility="visible"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@android:drawable/checkbox_off_background"
+                            tools:layout_constraintTop_creator="1"
+                            tools:layout_editor_absoluteX="333dp" />
+                    </FrameLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/chore_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/choreName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Chore name" />
+
+                        <TextView
+                            android:id="@+id/deadline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Deadline" />
+
+                        <TextView
+                            android:id="@+id/assignedTo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Assigned to" />
+
+                        <TextView
+                            android:id="@+id/points"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Points" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="51dp"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <FrameLayout
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/isCompleteImage"
+                            android:layout_width="33dp"
+                            android:layout_height="31dp"
+                            android:layout_weight="1"
+                            android:visibility="visible"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@android:drawable/checkbox_off_background"
+                            tools:layout_constraintTop_creator="1"
+                            tools:layout_editor_absoluteX="333dp" />
+                    </FrameLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+
+        android:id="@+id/addMemberBtn"
+
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+
+        android:clickable="true"
+
+        android:focusable="true"
+
+        android:visibility="gone"
+
+        app:backgroundTint="@color/colorPrimaryDark"
+
+        app:fabSize="mini"
+
+        app:layout_constraintBottom_toTopOf="@+id/lockBtn"
+
+        app:layout_constraintHorizontal_bias="0.0"
+
+        app:layout_constraintLeft_toLeftOf="@+id/lockBtn"
+
+        app:layout_constraintRight_toRightOf="@+id/lockBtn"
+
+        app:srcCompat="@mipmap/ic_input_add"
+
+        tools:layout_constraintBottom_creator="1"
+
+        tools:layout_constraintLeft_creator="1"
+
+        tools:layout_constraintRight_creator="1" />
+
+
+
+    <android.support.design.widget.FloatingActionButton
+
+        android:id="@+id/lockBtn"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:clickable="true"
+
+        android:focusable="true"
+
+        android:visibility="gone"
+
+        app:backgroundTint="@color/colorPrimaryDark"
+
+        app:fabSize="mini"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:srcCompat="@mipmap/lock"
+
+        tools:layout_constraintBottom_creator="1"
+
+        tools:layout_constraintRight_creator="1" />
+
+
+
+    <android.support.design.widget.FloatingActionButton
+
+        android:id="@+id/unlockBtn"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="16dp"
+
+        android:clickable="true"
+
+        android:focusable="true"
+
+        android:visibility="visible"
+
+        app:backgroundTint="@color/colorPrimaryDark"
+
+        app:fabSize="mini"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:srcCompat="@mipmap/unlock"
+
+        tools:layout_constraintBottom_creator="1"
+
+        tools:layout_editor_absoluteX="344dp" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,79 @@
+{
+  "project_info": {
+    "project_number": "103344503778",
+    "firebase_url": "https://returntosleep1.firebaseio.com",
+    "project_id": "returntosleep1",
+    "storage_bucket": "returntosleep1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103344503778:android:54c5e214c3a82943",
+        "android_client_info": {
+          "package_name": "ca.uottawa.householdchoremanagersystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103344503778-qmns8octrdu7keg2840pnqgrs0ssne8a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ca.uottawa.householdchoremanagersystem",
+            "certificate_hash": "8c8da6618242dcebe1b5df0095755d3971a1587d"
+          }
+        },
+        {
+          "client_id": "103344503778-kmfissf36u8mvc1n67dtsi5hca47g624.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ca.uottawa.householdchoremanagersystem",
+            "certificate_hash": "1645114accc4598da929c43de20e09d7fb2bca45"
+          }
+        },
+        {
+          "client_id": "103344503778-bdoccpdak428e3mm4hjhhtib73c8j7dc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ca.uottawa.householdchoremanagersystem",
+            "certificate_hash": "cb16c75c703e8c17a0e771d17a4c88d9fe7e836f"
+          }
+        },
+        {
+          "client_id": "103344503778-3ktlu3l94k8gomjrmskca4rd3e7va4ud.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ca.uottawa.householdchoremanagersystem",
+            "certificate_hash": "fdf02142afc1085ec95c9538578999ec3dd3b2b0"
+          }
+        },
+        {
+          "client_id": "103344503778-9kjd7faob8n1b0g4tobs76lhrul5d4ri.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3HoZBLMkozYu_oET1-jajhzKtS1ylAP8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103344503778-9kjd7faob8n1b0g4tobs76lhrul5d4ri.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
